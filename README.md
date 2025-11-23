@@ -15,40 +15,33 @@
 # 3. 코드 설명
 * **set 정의** : 집합을 표현하는 세트, *순서가 없고, 중복된 값을 표현하지 않는 자료형*, **{} 중괄호로 표현**
 
-**집합연산** 내장 함수
-**1. 합집합(union) : 세트1 | 세트2, set.union(세트1, 세트2)**
-
-**2. 교집합(intersection) : 세트1 & 세트2, set.intersection(세트1, 세트2)**
-
-**3. 차집합(difference) : 세트1 - 세트2, set.difference(세트1, 세트2)**
-
-**4. 대칭자집합(symmetric difference) : 세트1 ^ 세트2, set.symmetric_difference(세트1, 세트2)**
-
-**5. Update 메서드**
-
-  **1) update : 세트1 |= 세트2, 세트1.update(세트2)**
-  
-  **2) intersection_update : 세트1 &= 세트2, 세트1.intersection_update(세트2)**
-  
-  **3) difference_update : 세트1 -= 세트2, 세트1.difference_update(세트2)**
-  
-  **4) symmetric_difference_update : 세트1 ^= 세트2, 세트1.symmertric_difference_update(세트2)**
-
-  
-**6. 부분집합(subset) : issubset 메서드와 동일, 현재세트 <= 다른세트, 현재세트.issubset(다른세트)**
-
-**7. 진부분집합(proper subset) : 현재세트 < 다른세트**
-
-**8. 상위집합(superset) : 현재세트 >= 다른세트, 현재세트.issuperset(다른세트)**
-
-**9. 진상위집합(proper superset) : 현재세트 > 다른세트**
-
+## 주요 집합 연산
 | 연산 명칭 | 연산자 (Operator) | 메서드 (Method) | 설명 |
 | :--- | :--- | :--- | :--- |
 | **합집합** (Union) | `집합1 | 집합2` | `집합1.union(집합2)` | 두 집합의 모든 요소를 포함하는 새로운 집합 반환 |
 | **교집합** (Intersection) | `집합1 & 집합2` | `집합1.intersection(집합2)` | 두 집합에 공통으로 존재하는 요소만 포함하는 새로운 집합 반환 |
 | **차집합** (Difference) | `집합1 - 집합2` | `집합1.difference(집합2)` | 집합1에는 있고 집합2에는 없는 요소만 포함하는 새로운 집합 반환 |
 | **대칭 차집합** (Symmetric Difference) | `집합1 ^ 집합2` | `집합1.symmetric_difference(집합2)` | 두 집합 중 어느 한쪽에만 존재하는 요소 (교집합 제외)를 포함하는 새로운 집합 반환 |
+
+## Update 메서드
+| 연산 명칭 | 연산자 (Operator) | 메서드 (Method) | 설명 |
+| :--- | :--- | :--- | :--- |
+| **합집합 업데이트(update)** | `집합1 |= 집합2` | `집합1.update(집합2)` | 집합1에 집합2의 모든 요소를 추가 |
+| **교집합 업데이트(intersection_update)** | `집합1 &= 집합2` | `집합1.intersection_update(집합2)` | 집합1을 두 집합의 교집합으로 변경 |
+| **차집합 업데이트(difference_update)** | `집합1 -= 집합2` | `집합1.difference_update(집합2)` | 집합1에서 집합2와 겹치는 요소를 제거 |
+| **대칭차집합 업데이트(symmetric_difference_update)**| `집합1 ^= 집합2` | `집합1.symmetric_difference_update(집합2)` | 집합1을 두 집합의 대칭 차집합으로 변경 |
+  **1)  : 세트1 |= 세트2, 세트1.update(세트2)**
+
+## 집합 비교 연산
+결과는 **`True`** 또는 **`False`**로 반환됩니다.
+| 연산 명칭 | 연산자 (Operator) | 메서드 (Method) | 설명 |
+| :--- | :--- | :--- | :--- |
+| **부분집합** (Subset) | `현재집합 <= 다른집합` | `현재집합.issubset(다른집합)` | 현재 집합의 모든 요소가 다른 집합에 포함되는가? (두 집합이 같아도 True) |
+| **진부분집합** (Proper Subset)| `현재집합 < 다른집합` | (메서드 없음) | 현재 집합이 다른 집합에 포함되면서, 두 집합이 서로 같지 않은가? |
+| **상위집합** (Superset) | `현재집합 >= 다른집합` | `현재집합.issuperset(다른집합)` | 다른 집합의 모든 요소가 현재 집합에 포함되는가? (두 집합이 같아도 True) |
+| **진상위집합** (Proper Superset)| `현재집합 > 다른집합` | (메서드 없음) | 다른 집합이 현재 집합에 포함되면서, 두 집합이 서로 같지 않은가? |
+
+
 
 
 ## 4. 기타 정보
