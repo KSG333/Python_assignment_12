@@ -30,7 +30,7 @@
 | **교집합 업데이트(intersection_update)** | `집합1 &= 집합2` | `집합1.intersection_update(집합2)` | 집합1을 두 집합의 교집합으로 변경 |
 | **차집합 업데이트(difference_update)** | `집합1 -= 집합2` | `집합1.difference_update(집합2)` | 집합1에서 집합2와 겹치는 요소를 제거 |
 | **대칭차집합 업데이트(symmetric_difference_update)**| `집합1 ^= 집합2` | `집합1.symmetric_difference_update(집합2)` | 집합1을 두 집합의 대칭 차집합으로 변경 |
-  **1)  : 세트1 |= 세트2, 세트1.update(세트2)**
+
 
 ## 집합 비교 연산
 결과는 **`True`** 또는 **`False`**로 반환됩니다.
