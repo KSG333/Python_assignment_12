@@ -26,7 +26,7 @@
 ## Update 메서드
 | 연산 명칭 | 연산자 (Operator) | 메서드 (Method) | 설명 |
 | :--- | :--- | :--- | :--- |
-| **합집합 업데이트(update)** | 세트1 '|='세트2 | `세트1.update(세트2)` | 세트1에 세트2의 모든 요소를 추가 |
+| **합집합 업데이트(update)** | 세트1 *|=* 세트2 | `세트1.update(세트2)` | 세트1에 세트2의 모든 요소를 추가 |
 | **교집합 업데이트(intersection_update)** | `세트1 &= 세트2` | `세트1.intersection_update(세트2)` | 집합1을 두 집합의 교집합으로 변경 |
 | **차집합 업데이트(difference_update)** | `세트1 -= 세트2` | `세트1.difference_update(세트2)` | 세트1에서 세트2와 겹치는 요소를 제거 |
 | **대칭차집합 업데이트(symmetric_difference_update)**| `세트1 ^= 세트2` | `집합1.symmetric_difference_update(집합2)` | 집합1을 두 집합의 대칭 차집합으로 변경 |
